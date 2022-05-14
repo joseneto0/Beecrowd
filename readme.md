@@ -1,0 +1,1 @@
+Exercícios feitos mediante a treinos e atividades da faculdade
