@@ -7,7 +7,9 @@ for i in range(4):
 
 N = int(input())
 for i in range(N):
-    L, C = map(int, input().split())
+    L, C = input().split()
+    L = int(L)
+    C = int(C)
     L -= 1
     C -= 1
     matriz[L][C] = bomba
@@ -16,14 +18,14 @@ j1, j2 = map(int, input().split())
 j1 -= 1
 j2 -= 1
 
-#caso o local onde o jogador escolheu tenha bombas
+# caso o local onde o jogador escolheu tenha bombas
 if matriz[j1][j2] == bomba:
     print('B')
 
-#verificar a quantidade de dicas caso o local não tenha bomba
+# verificar a quantidade de dicas caso o local não tenha bomba
 elif matriz[j1][j2] == 0:
 
-    #Quinas
+    # Quinas
     if j1 == 0 and j2 == 0:
         if matriz[0][1] == bomba:
             contador_bombas += 1
@@ -69,7 +71,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #Teto (matriz[0][1])
+    # Teto (matriz[0][1])
     elif j1 == 0 and j2 == 1:
         if matriz[0][0] == bomba:
             contador_bombas += 1
@@ -86,7 +88,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #Teto (matriz[0][2])
+    # Teto (matriz[0][2])
     elif j1 == 0 and j2 == 2:
         if matriz[0][1] == bomba:
             contador_bombas += 1
@@ -103,7 +105,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #Teto(matriz[0][3])
+    # Teto(matriz[0][3])
     elif j1 == 0 and j2 == 3:
         if matriz[0][2] == bomba:
             contador_bombas += 1
@@ -120,7 +122,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #Teto(matriz[0][4])
+    # Teto(matriz[0][4])
     elif j1 == 0 and j2 == 4:
         if matriz[0][3] == bomba:
             contador_bombas += 1
@@ -137,7 +139,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #Chão(matriz[3][1])
+    # Chão(matriz[3][1])
     elif j1 == 3 and j2 == 1:
         if matriz[3][0] == bomba:
             contador_bombas += 1
@@ -154,7 +156,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #Chão(matriz[3][2])
+    # Chão(matriz[3][2])
     elif j1 == 3 and j2 == 2:
         if matriz[3][1] == bomba:
             contador_bombas += 1
@@ -171,7 +173,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #Chão(matriz[3][3])
+    # Chão(matriz[3][3])
     elif j1 == 3 and j2 == 3:
         if matriz[3][2] == bomba:
             contador_bombas += 1
@@ -188,7 +190,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #Chão(matriz[3][4])
+    # Chão(matriz[3][4])
     elif j1 == 3 and j2 == 4:
         if matriz[3][3] == bomba:
             contador_bombas += 1
@@ -205,7 +207,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #Esquerda(matriz[1][0])
+    # Esquerda(matriz[1][0])
     elif j1 == 1 and j2 == 0:
         if matriz[0][0] == bomba:
             contador_bombas += 1
@@ -222,7 +224,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #Esquerda(matriz[2][0])
+    # Esquerda(matriz[2][0])
     elif j1 == 2 and j2 == 0:
         if matriz[1][0] == bomba:
             contador_bombas += 1
@@ -239,7 +241,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #Direita(matriz[1][5])
+    # Direita(matriz[1][5])
     elif j1 == 1 and j2 == 5:
         if matriz[0][5] == bomba:
             contador_bombas += 1
@@ -256,7 +258,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #Direita(matriz[2][5])
+    # Direita(matriz[2][5])
     elif j1 == 2 and j2 == 5:
         if matriz[1][5] == bomba:
             contador_bombas += 1
@@ -273,7 +275,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #meio(matriz[1][1])
+    # meio(matriz[1][1])
     elif j1 == 1 and j2 == 1:
         if matriz[0][0] == bomba:
             contador_bombas += 1
@@ -296,7 +298,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #meio(matriz[1][2])
+    # meio(matriz[1][2])
     elif j1 == 1 and j2 == 2:
         if matriz[0][1] == bomba:
             contador_bombas += 1
@@ -319,7 +321,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #meio(matriz[1][3])
+    # meio(matriz[1][3])
     elif j1 == 1 and j2 == 3:
         if matriz[0][2] == bomba:
             contador_bombas += 1
@@ -342,7 +344,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #meio(matriz[1][4])
+    # meio(matriz[1][4])
     elif j1 == 1 and j2 == 4:
         if matriz[0][3] == bomba:
             contador_bombas += 1
@@ -365,7 +367,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #meio(matriz[2][1])
+    # meio(matriz[2][1])
     elif j1 == 2 and j2 == 1:
         if matriz[1][0] == bomba:
             contador_bombas += 1
@@ -388,7 +390,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #meio(matriz[2][2])
+    # meio(matriz[2][2])
     elif j1 == 2 and j2 == 2:
         if matriz[1][1] == bomba:
             contador_bombas += 1
@@ -411,7 +413,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #meio(matriz[2][3])
+    # meio(matriz[2][3])
     elif j1 == 2 and j2 == 3:
         if matriz[1][2] == bomba:
             contador_bombas += 1
@@ -434,7 +436,7 @@ elif matriz[j1][j2] == 0:
         else:
             print('X')
 
-    #meio(matriz[2][4])
+    # meio(matriz[2][4])
     elif j1 == 2 and j2 == 4:
         if matriz[1][3] == bomba:
             contador_bombas += 1
@@ -456,3 +458,5 @@ elif matriz[j1][j2] == 0:
             print(contador_bombas)
         else:
             print('X')
+for i in matriz:
+    print(i)
