@@ -5,13 +5,10 @@ while True:
         break
     dict = {}   
     lista = []
-    dict['W'] = 1
-    dict['H'] = 0.5
-    dict['Q'] = 0.25
-    dict['E'] = 0.125
-    dict['S'] = 0.0625
-    dict['T'] = 0.03125
-    dict['X'] = 0.015625
+    valor = 1
+    for i in ['W', 'H', 'Q', 'E', 'S', 'T', 'X']:
+        dict[i] = valor
+        valor /= 2
     for i in range(len(s)):
         if s[i] in dict.keys():
             soma += dict[s[i]]
@@ -23,4 +20,3 @@ while True:
         if lista[i] != 0 and lista[i] != 1:
             contador -= 1
     print(contador)
-        

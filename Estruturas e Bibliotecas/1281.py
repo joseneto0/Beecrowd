@@ -14,3 +14,4 @@ for i in range(N):
         if s in dicio.keys():
             cont += (dicio[s] * v)
     print(f"R$ {cont:.2f}")
+    dicio.clear()
