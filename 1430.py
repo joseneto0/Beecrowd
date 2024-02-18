@@ -1,14 +1,14 @@
+dict = {}  
+valor = 1
+for i in ['W', 'H', 'Q', 'E', 'S', 'T', 'X']:
+        dict[i] = valor
+        valor /= 2
 while True:
     soma = 0
     s = input()
     if s == '*':
         break
-    dict = {}   
     lista = []
-    valor = 1
-    for i in ['W', 'H', 'Q', 'E', 'S', 'T', 'X']:
-        dict[i] = valor
-        valor /= 2
     for i in range(len(s)):
         if s[i] in dict.keys():
             soma += dict[s[i]]
