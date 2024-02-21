@@ -26,6 +26,7 @@
         "valarray": "cpp",
         "iosfwd": "cpp",
         "sstream": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "tuple": "cpp"
     }
 }
